@@ -1,24 +1,30 @@
-#include<iostream>
-#include<string>
+#include <iostream>
 using namespace std;
-int main(){
-   int ar1[10]={10,23,34,45,65,43,455,56,35,100};
-   int ar2[10]={0};
-   int tempL=0,tempH=0;
-   ar2[0]=ar1[0];
 
+int main()
+{
+    int marks[5] ={70,50,90,60,80};
+    int key;
+    for(int i=1;i<5;i++)
+    {
+        key=marks[i];
+        int j = i-1;
 
-   for(int i=0;i<10;i++){
-        if(ar2[0]<ar1[i])
+        while(j>=0 && marks[j]>key)
         {
-            tempH=ar1[i];
-        }
-        else if(ar2[0]>ar1[i])
-        {
-            tempL=ar1[i];
+            marks[j+1]=marks[j];
+            j--;
         }
 
-   }
+        marks[j+1]=key;
+    }
 
-return 0;
+    cout<<"Sorted marks: ";
+
+    for(int i = 0; i < 5; i++)
+    {
+        cout << marks[i] << " ";
+    }
+
+    return 0;
 }
