@@ -1,16 +1,13 @@
 #include<iostream>
 using namespace std;
-
 int main()
 {
     int n;
     cout<<"Enter maximum capacity of stack: ";
     cin>>n;
-
     int stac[n];
     int top=-1;
     int choice;
-
     do
     {
         cout<<"\n1. Place tray";
@@ -19,7 +16,6 @@ int main()
         cout<<"\n0. Exit";
         cout<<"\nEnter choice: ";
         cin>>choice;
-
         switch(choice)
         {
             case 1:
